@@ -6,7 +6,11 @@ import { dbConnection } from './dbConnection.js';
 import { ratelimiter } from './rateLimiter.js';
 const PORT = process.env.PORT || 3001
 const app = express()
-app.use(cors())
+app.use(cors({
+    origin: 'https://shortitnow.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+}));
 dotenv.config();
 app.use(express.json())
 
