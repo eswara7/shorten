@@ -4,12 +4,12 @@ import cors from 'cors'
 import { urlRouter } from './routes/urlRouter.js';
 import { dbConnection } from './dbConnection.js';
 import { ratelimiter } from './rateLimiter.js';
-dotenv.config();
-
-const app = express()
 const PORT = process.env.PORT || 3001
+const app = express()
+app.use(cors())
+dotenv.config();
 app.use(express.json())
-app.use(cors()) //i'll code frontend later
+
 app.use(ratelimiter)
 dbConnection()
 
