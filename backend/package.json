@@ -1,0 +1,20 @@
+{
+  "name": "shorten backend",
+  "version": "1.0.0",
+  "description": "backend for url shortner",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Eswara Rao Landa",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.3",
+    "nanoid": "^5.0.9",
+    "validator": "^13.12.0"
+  }
+}
